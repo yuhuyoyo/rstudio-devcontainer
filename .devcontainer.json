@@ -1,0 +1,11 @@
+{
+  "name": "Rstudio app",
+  "dockerComposeFile": ["docker-compose.yml"],
+  "service": "app",
+  "shutdownAction": "none",
+  "postCreateCommand": "./post-startup.sh",
+  "remoteUser": "root",
+  "runArgs": [
+    "--cap-add SYS_ADMIN", "--device /dev/fuse"
+  ]
+}
